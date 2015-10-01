@@ -5,7 +5,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -2391,18 +2391,27 @@ section.content {
     clear: both; }
 
 section.content article {
-  width: 74.57627%;
+  width: 83.05085%;
   float: left;
   margin-right: 1.69492%;
-  padding-left: 30px; }
+  padding-left: 30px;
+  margin-top: -1.46rem; }
 
 section.content aside {
-  width: 23.72881%;
+  width: 15.25424%;
   float: right;
   margin-right: 0; }
 
 section.content aside ul {
-  list-style: none; }
+  list-style: none;
+  padding-left: 0; }
+
+section.content aside li {
+  display: block;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  margin: 5px; }
 
 html {
   font-family: 'Roboto', sans-serif;
@@ -2467,42 +2476,58 @@ small {
 .thin {
   font-weight: 200; }
 
-nav > section {
-  text-align: center; }
+p {
+  font-weight: 400;
+  line-height: 1.6; }
 
-nav > section > ul {
+nav section {
+  text-align: left; }
+
+nav section ul {
   list-style: none;
+  height: 72px;
   margin: 0;
   padding: 0; }
 
-nav > section > ul li {
+nav section img {
+  height: 45px;
+  vertical-align: middle; }
+
+nav section ul li {
   display: inline-block;
   text-decoration: none;
   padding-left: 15px;
   padding-right: 15px;
-  height: 45px;
-  line-height: 2.8125rem;
+  height: 72px;
+  line-height: 72px;
   margin: 0; }
 
-nav > section > ul li a {
-  color: white;
-  font-weight: normal; }
+nav section ul li a {
+  color: #324D5C;
+  font-weight: 700; }
 
-nav > section > ul li:hover {
-  background-color: #DE5B49; }
+nav section ul li a:hover {
+  color: #DE5B49; }
 
 nav {
   width: 100%;
-  background-color: #E37B40;
-  height: 45px; }
+  background-color: #fcf0e9;
+  border-bottom: 2px solid #eda983;
+  font-size: 20px;
+  height: 72px; }
 
 @media only screen and (max-width: 600px) {
+  nav section ul li:first-child {
+    display: none; }
+  nav section {
+    text-align: center; }
   section.content article {
     width: 100%;
     float: right;
     margin-right: 0;
     padding-left: 10px;
-    padding-right: 10px; }
+    padding-right: 10px;
+    margin-top: -1.46rem; }
   section.content aside {
     display: none;
     visibility: hidden; }
@@ -2531,7 +2556,8 @@ div.flash {
   margin-left: auto;
   margin-right: auto;
   height: auto;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-top: 10px; }
   div.flash:after {
     content: " ";
     display: block;
@@ -2638,3 +2664,23 @@ ul li:first-child a, div.paginate
 ul
 li:last-child a {
       color: #46B29D; }
+
+blockquote {
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: 2px solid #eda983;
+  background-color: #fae7dc;
+  color: #ea9a6c;
+  margin-left: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 20px; }
+  blockquote
+cite {
+    display: block;
+    font-style: italic;
+    font-size: 75%;
+    padding-left: 20px; }

@@ -3,6 +3,7 @@
 @import "node_modules/breakpoint-sass/stylesheets/breakpoint";
 @import "mixins";
 @import "fontawesome/font-awesome";
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
 
 // Couleur
 $color1: #324D5C;
@@ -40,25 +41,36 @@ section.content
 
 section.content article
 {
-    @include span(9 of 12);
+    @include span(10 of 12);
     padding-left: 30px;
+    margin-top: -($h3-fontsize / 2);
 }
 
 section.content aside
 {
-    @include span(3 of 12 last);
+    @include span(2 of 12 last);
 }
 
 section.content aside ul
 {
     list-style: none;
+    padding-left: 0;
+}
+
+section.content aside li
+{
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    margin: 5px;
 }
 
 // Typographie
 
 html
 {
-    @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300);
+    @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     font-weight: normal;
@@ -92,49 +104,64 @@ strong { font-weight: 500; }
 small { font-size: 75%; }
 .light { font-weight: 300; }
 .thin { font-weight: 200; }
+p
+{
+    font-weight: 400;
+    line-height: 1.6;
+}
 
 // nav bar
-nav>section
+nav section
 {
-    text-align: center;
+    text-align: left;
 
 }
 
 
-nav>section>ul
+nav section ul
 {
     list-style: none;
+    height: 72px;
     margin: 0;
     padding: 0;
 }
 
-nav>section>ul li
+nav section img
+{
+    height: 45px;
+    vertical-align: middle;
+}
+
+nav section ul li
 {
     display: inline-block;
     text-decoration: none;
     padding-left: 15px;
     padding-right: 15px;
-    height: 45px;
-    line-height: 2.8125rem;
+    height: 72px;
+    line-height: 72px;
     margin: 0;
+
 }
 
-nav>section>ul li a
+nav section ul li a
 {
-    color: rgb(255, 255, 255);
-    font-weight: normal;
+    color: $color1;
+    font-weight: 700;
 }
 
-nav>section>ul li:hover
+nav section ul li a:hover
 {
-    background-color: $color5;
+    color: $color5;
 }
 
 nav
 {
     width: 100%;
-    background-color: $color4;
-    height: 45px;
+    background-color: lighten($color4, 38%);
+    border-bottom: 2px solid darken(lighten($color4, 35%),20%);
+    font-size: 20px;
+    height: 72px;
 }
 
 // Media Query
@@ -146,11 +173,24 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 
 @media #{$small-and-down} {
 
+    nav section ul li:first-child
+    {
+        display: none;
+    }
+
+    nav section
+    {
+        text-align: center;
+
+    }
+
+
     section.content article
     {
         @include span(12 of 12 last);
         padding-left: 10px;
         padding-right: 10px;
+        margin-top: -($h3-fontsize / 2);
     }
 
     section.content aside
@@ -193,6 +233,7 @@ div.flash
     @include container();
     height: auto;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 div.flash.alert
@@ -299,3 +340,31 @@ div.paginate
     }
 
 }
+
+// blockquote
+blockquote
+{
+    border-style: solid;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
+    border-left: 2px solid darken(lighten($color4, 35%),20%);
+    background-color: lighten($color4, 35%);
+    color: lighten($color4,10%);
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+
+    cite
+    {
+        display: block;
+        font-style: italic;
+        font-size: 75%;
+        padding-left: 20px;
+    }
+
+}
+
+// Formulaire
