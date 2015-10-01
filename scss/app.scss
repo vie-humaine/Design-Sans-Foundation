@@ -34,30 +34,30 @@ $susy: (global-box-sizing: border-box);
 
 // Structure Content
 
-section.content
+div.content
 {
     @include container();
 }
 
-section.content article
+div.content article
 {
     @include span(10 of 12);
     padding-left: 30px;
     margin-top: -($h3-fontsize / 2);
 }
 
-section.content aside
+div.content aside
 {
     @include span(2 of 12 last);
 }
 
-section.content aside ul
+div.content aside ul
 {
     list-style: none;
     padding-left: 0;
 }
 
-section.content aside li
+div.content aside li
 {
     display: block;
     padding-top: 5px;
@@ -75,7 +75,6 @@ html
     line-height: 1.5;
     font-weight: normal;
     color: $color1;
-    min-width: 320px;
 }
 
 a
@@ -111,14 +110,14 @@ p
 }
 
 // nav bar
-nav section
+nav
 {
     text-align: left;
 
 }
 
 
-nav section ul
+nav ul
 {
     list-style: none;
     height: 70px;
@@ -126,13 +125,13 @@ nav section ul
     padding: 0;
 }
 
-nav section img
+nav ul li img
 {
     height: 50px;
     vertical-align: middle;
 }
 
-nav section ul li
+nav ul li
 {
     display: inline-block;
     text-decoration: none;
@@ -144,13 +143,13 @@ nav section ul li
 
 }
 
-nav section ul li a
+nav ul li a
 {
     color: $color1;
     font-weight: 700;
 }
 
-nav section ul li a:hover
+nav ul li a:hover
 {
     color: $color5;
 }
@@ -173,19 +172,19 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 
 @media #{$small-and-down} {
 
-    nav section ul li:first-child
+    nav ul li:first-child
     {
         display: none;
     }
 
-    nav section
+    nav
     {
         text-align: center;
 
     }
 
 
-    section.content article
+    div.content article
     {
         @include span(12 of 12 last);
         padding-left: 10px;
@@ -193,7 +192,7 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
         margin-top: -($h3-fontsize / 2);
     }
 
-    section.content aside
+    div.content aside
     {
         display: none;
         visibility: hidden;
@@ -212,14 +211,14 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
 
 @media #{$medium-only} {
 
-    section.content article
+    div.content article
     {
         @include span(12 of 12 last);
         padding-left: 30px;
         padding-right: 30px;
     }
 
-    section.content aside
+    div.content aside
     {
         display: none;
         visibility: hidden;
