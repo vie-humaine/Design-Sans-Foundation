@@ -27,6 +27,8 @@ $small-screen: 600px;
 $medium-screen: 992px;
 $large-screen: 1200px;
 
+$susy: (global-box-sizing: border-box);
+
 @include global-box-sizing(border-box);
 
 // Structure Content
