@@ -1,0 +1,35 @@
+// Couleur
+$color1: #324D5C;
+$color2: #46B29D;
+$color3: #F0CA4D;
+$color4: #E37B40;
+$color5: #DE5B49;
+
+// Header Styles
+$h1-fontsize: 4.2rem;
+$h2-fontsize: 3.56rem;
+$h3-fontsize: 2.92rem;
+$h4-fontsize: 2.28rem;
+$h5-fontsize: 1.64rem;
+$h6-fontsize: 1rem;
+
+// Media Query
+$small-screen-up: 601px;
+$medium-screen-up: 993px;
+$large-screen-up: 1201px;
+$small-screen: 600px;
+$medium-screen: 992px;
+$large-screen: 1200px;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})";
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})";
+$small-and-down: "only screen and (max-width : #{$small-screen})";
+$medium-and-down: "only screen and (max-width : #{$medium-screen})";
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})";
+
+$susy: (global-box-sizing: border-box);
+
+// Flow Text
+$range : $large-screen - $small-screen;
+$intervals: 15;
+$interval-size: $range / $intervals;

@@ -1,0 +1,71 @@
+// flash message
+
+div.flash
+{
+    @include container();
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+div.flash.alert
+{
+    color: $color5;
+    font-size: $h5-fontsize;
+    background-color: lighten($color5, 35%);
+    padding-left: 30px;
+    line-height: 2.8125rem;
+    border: 1px solid darken(lighten($color5, 35%),10%);
+    @include border-radius(10px);
+}
+
+div.flash.info
+{
+    color: $color3;
+    font-size: $h5-fontsize;
+    background-color: lighten($color3, 30%);
+    padding-left: 30px;
+    line-height: 2.8125rem;
+    border: 1px solid darken(lighten($color3, 30%),10%);
+    @include border-radius(10px);
+}
+
+div.flash.success
+{
+    color: $color2;
+    font-size: $h5-fontsize;
+    background-color: lighten($color2, 40%);
+    padding-left: 30px;
+    line-height: 2.8125rem;
+    border: 1px solid darken(lighten($color2, 40%),10%);
+    @include border-radius(10px);
+}
+
+div.flash .left
+{
+    @include span(11 of 12);
+}
+
+div.flash .right
+{
+    @include span(1 of 12 last);
+
+    a
+    {
+        text-decoration: none;
+        color:inherit;
+    }
+}
+
+@media #{$small-and-down}
+{
+    div.flash .left
+    {
+        @include span(10 of 12);
+    }
+
+    div.flash .right
+    {
+        @include span(2 of 12 last);
+    }
+}

@@ -1,0 +1,67 @@
+// nav bar
+nav
+{
+    text-align: left;
+
+}
+
+
+nav ul
+{
+    list-style: none;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li img
+{
+    height: 50px;
+    vertical-align: middle;
+}
+
+nav ul li
+{
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0;
+
+}
+
+nav ul li a
+{
+    color: $color1;
+    font-weight: 700;
+}
+
+nav ul li a:hover
+{
+    color: $color5;
+}
+
+nav
+{
+    width: 100%;
+    background-color: lighten($color4, 38%);
+    border-bottom: 2px solid darken(lighten($color4, 35%),20%);
+    font-size: 20px;
+    height: 72px;
+}
+
+@media #{$small-and-down} {
+
+    nav ul li:first-child
+    {
+        display: none;
+    }
+
+    nav
+    {
+        text-align: center;
+
+    }
+}
