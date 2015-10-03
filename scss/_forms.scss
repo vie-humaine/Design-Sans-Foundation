@@ -1,0 +1,60 @@
+// Formulaire
+
+form input
+{
+    border: 1px solid $color2;
+    width: 100%;
+    height: 27px;
+    margin-bottom: 20px;
+}
+
+form div.required label::after
+{
+    content: ' *';
+    color: $color5;
+}
+
+form input:focus
+{
+    border: 1px solid darken($color2,10%);
+    @include box-shadow(0 0 5px darken($color2,10%));
+}
+
+form label
+{
+    display: block;
+    color: $color1;
+    margin-bottom: 2px;
+}
+
+form select
+{
+    border: 1px solid $color2;
+    width: 100%;
+    height: 27px;
+    margin-bottom: 20px;
+}
+
+form textarea
+{
+    border: 1px solid $color2;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+form button
+{
+    background-color: $color4;
+    border: 1px solid darken($color4, 10%);
+    @include border-radius(10px);
+    color: rgb(255,255,255);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+form button:hover
+{
+    background-color: darken($color4, 10%);
+}

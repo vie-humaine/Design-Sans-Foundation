@@ -10,5 +10,28 @@
 @import "flash";
 @import "paginate";
 @import "content";
+@import "forms";
+@import "table";
+@import "panel";
+@import "highlight";
 
 @include global-box-sizing(border-box);
+
+// Footer
+
+footer
+{
+    width: 100%;
+    background-color: lighten($color4, 38%);
+    border-top: 2px solid darken(lighten($color4, 35%),20%);
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+    img
+    {
+        vertical-align: middle;
+    }
+}

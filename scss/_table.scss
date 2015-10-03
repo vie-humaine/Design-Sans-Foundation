@@ -1,0 +1,42 @@
+// Tableau
+
+table
+{
+    border: 1px solid $color2;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+thead
+{
+    background-color: lighten($color4, 30%);
+}
+
+tr
+{
+    border: 1px solid $color2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+td
+{
+    border: 1px solid $color2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+th
+{
+    border: 1px solid $color2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
