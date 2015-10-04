@@ -19,6 +19,18 @@ div.flash.alert
     @include border-radius(10px);
 }
 
+div.flash.alert div.left::before
+{
+    font-family: FontAwesome;
+    content: '\f071';
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-size: inherit;
+    margin-right: 5px;
+}
+
 div.flash.info
 {
     color: $color3;
@@ -30,6 +42,18 @@ div.flash.info
     @include border-radius(10px);
 }
 
+div.flash.info div.left::before
+{
+    font-family: FontAwesome;
+    content: '\f05a';
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-size: inherit;
+    margin-right: 5px;
+}
+
 div.flash.success
 {
     color: $color2;
@@ -39,6 +63,18 @@ div.flash.success
     line-height: 2.8125rem;
     border: 1px solid darken(lighten($color2, 40%),10%);
     @include border-radius(10px);
+}
+
+div.flash.success div.left::before
+{
+    font-family: FontAwesome;
+    content: '\f00c';
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-size: inherit;
+    margin-right: 5px;
 }
 
 div.flash .left

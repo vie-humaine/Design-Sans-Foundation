@@ -52,7 +52,7 @@ small { font-size: 75%; }
 .light { font-weight: 300; }
 .thin { font-weight: 200; }
 
-p {
+article {
     font-weight: 300;
     $i: 0;
     @while $i <= $intervals {
@@ -87,6 +87,19 @@ blockquote
         padding-left: 20px;
     }
 
+}
+
+blockquote::before
+{
+    font-family: FontAwesome;
+    content: '\f10d';
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    margin-right: .3em;
+    float: left;
+    display: inline-block;
+    font-size: 3em;
 }
 
 // balise pre et code

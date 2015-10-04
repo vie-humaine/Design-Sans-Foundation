@@ -17,8 +17,43 @@
 
 @include global-box-sizing(border-box);
 
-// Footer
+// image
+div.content img
+{
+    max-width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
+// emojione
+img.emojione
+{
+    height: 14px;
+    $i: 0;
+    @while $i <= $intervals {
+        @media only screen and (min-width : 360 + ($i * $interval-size)) {
+            height: 1.2rem * (1 + (.02 * $i));
+        }
+        $i: $i + 1;
+    }
+    vertical-align: middle;
+}
+
+// body,Html
+html
+{
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+}
+
+body
+{
+    margin: 0 0 100px; /* bottom = footer height */
+    width: 100%;
+}
+
+// Footer
 footer
 {
     width: 100%;
@@ -29,6 +64,9 @@ footer
     text-align: center;
     margin-bottom: 0px;
     padding-bottom: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 
     img
     {
